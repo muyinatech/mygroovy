@@ -41,3 +41,41 @@ println lst - ['Productive', 'In']
 
 println lst.size()
 println lst*.size() // spread operator same as lst.collect{it.size}
+
+langs = ['C++':'Stroustrup','Java':'Gosling','Lisp':'McCarthy'] // LinkedHashMap by default
+println langs.getClass().name
+println langs['Java']
+println langs['C++']
+println langs.Java // access keys like a property
+println langs.'C++'
+
+langs = ['C++':'Stroustrup',Java:'Gosling',Lisp:'McCarthy'] // quotes are optional
+langs.each { language, author ->
+    println "Language $language was authored by $author"
+}
+
+println langs.collect { language, author ->
+    language.replaceAll("[+]", "P")
+}
+
+entry = langs.find { language, author ->
+   language.size() > 3
+}
+println "Found $entry.key written by $entry.value"
+
+selected = langs.findAll { language, author ->
+    language.size() > 3
+}
+selected.each { key, value ->
+    println "Found $key written by $value"
+}
+
+friends = [briang:'Brian Green', brains:'Brian Saunders', davidb:'David Brown', davidg:'David Gordon',
+        scottd:'Scott Davis',scottl:'Scott Lewis',stuarth:'Stuart Hill']
+
+groupByFirstName = friends.groupBy {it.value.split(' ')[0]}
+println groupByFirstName
+
+groupByFirstName.each { firstName, buddies ->
+    println "$firstName:${buddies.collect {key, fullName -> fullName}.join(', ')}"
+}
