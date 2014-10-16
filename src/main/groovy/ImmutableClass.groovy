@@ -1,8 +1,5 @@
 import groovy.transform.Immutable
 
-/**
- * Created by Tosin on 31/01/14.
- */
 @Immutable
 class ImmutableClass {
     String name

@@ -1,13 +1,10 @@
-/**
- * Created by Tosin on 31/01/14.
- */
 def pickEven(n, block){ // higher order function, a functions that takes functions as arguments or returns a function as a result
     for(int i=2;  i<=n; i +=2) {
         block(i) // block holds a reference to the closure
     }
 }
 
-pickEven(10, {println it}) // it default name for a single paramater passed to a closure
+pickEven(10, {println it}) // it default name for a single parameter passed to a closure
 pickEven(10, {evenNumber -> println evenNumber}) // specify name for closure variable
 total =1
 pickEven(10) {total += it}

@@ -2,9 +2,6 @@ package muyinatech.mygroovy.javabean
 
 import groovy.transform.Canonical
 
-/**
- * Created by Tosin on 31/01/14.
- */
 @Canonical(excludes = "year") // specifies to include all the fields in toString()
 class Car {
     def miles = 0

@@ -48,7 +48,3 @@ class Manager {
 def bernie = new Manager()
 bernie.anaylze()
 bernie.work()
-
-/*
-Define a im
- */

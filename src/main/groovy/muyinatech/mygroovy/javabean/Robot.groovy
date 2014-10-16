@@ -1,8 +1,5 @@
 package muyinatech.mygroovy.javabean
 
-/**
- * Created by Tosin on 31/01/14.
- */
 class Robot {
     def type, height, width
     def static access(Map location, weight, fragile, other="n/a") {// other arg is optional
